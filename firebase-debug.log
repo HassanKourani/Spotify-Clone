@@ -1,0 +1,134 @@
+[debug] [2022-09-03T16:24:45.343Z] ----------------------------------------------------------------------
+[debug] [2022-09-03T16:24:45.347Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-09-03T16:24:45.348Z] CLI Version:   11.8.0
+[debug] [2022-09-03T16:24:45.348Z] Platform:      win32
+[debug] [2022-09-03T16:24:45.348Z] Node Version:  v16.14.0
+[debug] [2022-09-03T16:24:45.349Z] Time:          Sat Sep 03 2022 19:24:45 GMT+0300 (Eastern European Summer Time)
+[debug] [2022-09-03T16:24:45.350Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-03T16:24:45.355Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-09-03T16:24:45.392Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-03T16:24:45.392Z] > authorizing via signed-in user (hkourani36@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\Desktop\LIU(Hassan)\VS Code Programs\spotify-clone
+
+[debug] [2022-09-03T16:24:46.148Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-09-03T16:24:46.148Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-09-03T16:27:33.434Z] > refreshing access token with scopes: []
+[debug] [2022-09-03T16:27:33.436Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-03T16:27:33.436Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-03T16:27:34.098Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-03T16:27:34.099Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-03T16:27:34.126Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-09-03T16:27:35.008Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-09-03T16:27:35.008Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project musicapp-2e1b7 (MusicApp) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2022-09-03T16:27:45.360Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com [none]
+[debug] [2022-09-03T16:27:48.476Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com 200
+[debug] [2022-09-03T16:27:48.477Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com [omitted]
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2022-09-03T16:27:48.480Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com:enable [none]
+[debug] [2022-09-03T16:27:50.822Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com:enable 200
+[debug] [2022-09-03T16:27:50.823Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com:enable [omitted]
+[debug] [2022-09-03T16:28:00.830Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com [none]
+[debug] [2022-09-03T16:28:02.642Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com 200
+[debug] [2022-09-03T16:28:02.643Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2022-09-03T16:28:02.656Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/musicapp-2e1b7 [none]
+[debug] [2022-09-03T16:28:03.171Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/musicapp-2e1b7 200
+[debug] [2022-09-03T16:28:03.172Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/musicapp-2e1b7 {"projectId":"musicapp-2e1b7","projectNumber":"1046299945642","displayName":"MusicApp","name":"projects/musicapp-2e1b7","resources":{"hostingSite":"musicapp-2e1b7","storageBucket":"musicapp-2e1b7.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1bd708e3-d3e0-4ee6-a746-23e36eec78ca"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2022-09-03T16:28:44.249Z] ----------------------------------------------------------------------
+[debug] [2022-09-03T16:28:44.252Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-09-03T16:28:44.253Z] CLI Version:   11.8.0
+[debug] [2022-09-03T16:28:44.253Z] Platform:      win32
+[debug] [2022-09-03T16:28:44.254Z] Node Version:  v16.14.0
+[debug] [2022-09-03T16:28:44.255Z] Time:          Sat Sep 03 2022 19:28:44 GMT+0300 (Eastern European Summer Time)
+[debug] [2022-09-03T16:28:44.255Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-03T16:28:44.268Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-03T16:28:44.269Z] > authorizing via signed-in user (hkourani36@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\Desktop\LIU(Hassan)\VS Code Programs\spotify-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-09-03T16:29:06.991Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-09-03T16:29:07.969Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-09-03T16:29:07.970Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project musicapp-2e1b7 (MusicApp) 
+[info] 
+=== Firestore Setup
+[debug] [2022-09-03T16:29:09.930Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firestore.googleapis.com [none]
+[debug] [2022-09-03T16:29:11.451Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firestore.googleapis.com 200
+[debug] [2022-09-03T16:29:11.452Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/musicapp-2e1b7/services/firestore.googleapis.com [omitted]
+[debug] [2022-09-03T16:29:11.453Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/musicapp-2e1b7 [none]
+[debug] [2022-09-03T16:29:12.845Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/musicapp-2e1b7 200
+[debug] [2022-09-03T16:29:12.846Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/musicapp-2e1b7 {"name":"apps/musicapp-2e1b7","id":"musicapp-2e1b7","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.musicapp-2e1b7.appspot.com","servingStatus":"SERVING","defaultHostname":"musicapp-2e1b7.uc.r.appspot.com","defaultBucket":"musicapp-2e1b7.appspot.com","serviceAccount":"musicapp-2e1b7@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-09-03T16:29:12.846Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-09-03T16:29:12.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-03T16:29:12.848Z] > authorizing via signed-in user (hkourani36@gmail.com)
+[debug] [2022-09-03T16:29:12.849Z] [iam] checking project musicapp-2e1b7 for permissions ["firebase.projects.get"]
+[debug] [2022-09-03T16:29:12.850Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/musicapp-2e1b7:testIamPermissions [none]
+[debug] [2022-09-03T16:29:12.851Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/musicapp-2e1b7:testIamPermissions x-goog-quota-user=projects/musicapp-2e1b7
+[debug] [2022-09-03T16:29:12.851Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/musicapp-2e1b7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-09-03T16:29:14.156Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/musicapp-2e1b7:testIamPermissions 200
+[debug] [2022-09-03T16:29:14.156Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/musicapp-2e1b7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-09-03T16:29:27.109Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/musicapp-2e1b7/releases pageSize=10&pageToken=
+[debug] [2022-09-03T16:29:32.906Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/musicapp-2e1b7/releases 200
+[debug] [2022-09-03T16:29:32.907Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/musicapp-2e1b7/releases {"releases":[{"name":"projects/musicapp-2e1b7/releases/cloud.firestore","rulesetName":"projects/musicapp-2e1b7/rulesets/fcb2d4ac-b7d5-41ec-add3-2c9d3f7e20eb","createTime":"2022-08-23T18:58:38.525095Z","updateTime":"2022-08-26T17:48:38.293545Z"}]}
+[debug] [2022-09-03T16:29:32.908Z] Found ruleset: projects/musicapp-2e1b7/rulesets/fcb2d4ac-b7d5-41ec-add3-2c9d3f7e20eb
+[debug] [2022-09-03T16:29:32.909Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/musicapp-2e1b7/rulesets/fcb2d4ac-b7d5-41ec-add3-2c9d3f7e20eb [none]
+[debug] [2022-09-03T16:29:33.706Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/musicapp-2e1b7/rulesets/fcb2d4ac-b7d5-41ec-add3-2c9d3f7e20eb 200
+[debug] [2022-09-03T16:29:33.707Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/musicapp-2e1b7/rulesets/fcb2d4ac-b7d5-41ec-add3-2c9d3f7e20eb [omitted]
+[debug] [2022-09-03T16:29:33.960Z] Error: EISDIR: illegal operation on a directory, open 'C:\Users\HP\Desktop\LIU(Hassan)\VS Code Programs\spotify-clone\build'
+    at Object.openSync (node:fs:585:3)
+    at Object.writeFileSync (node:fs:2155:35)
+    at Object.createFileSync (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:63:6)
+    at Config.writeProjectFile (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:152:12)
+    at C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\rules.js:50:27
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doSetup (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\index.js:35:5)
+    at async init (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -1,23 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Nav from "./views/Nav";
+import { db } from "./config";
+import { getAuth } from "firebase/auth";
+import Signup from "./views/Signup";
+import Home from "./views/Home";
+import Signin from "./views/Signin";
+import Search from "./views/Search";
+import Playlists from "./views/Playlists";
+import Playlist from "./views/Playlist";
+import Liked from "./views/Liked";
+import Welcome from "./views/Welcome";
+import NotFound from "./views/NotFound";
 function App() {
+  const auth = getAuth();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-Nunito bg-gray-900">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Welcome />
+          </Route>
+          <Route exact path="/home/:id">
+            <Home db={db} />
+            <Nav auth={auth} />
+          </Route>
+          <Route exact path="/playlists/:id">
+            <Playlists db={db} />
+            <Nav auth={auth} />
+          </Route>
+          <Route exact path="/playlists/:id/:pid">
+            <Playlist db={db} />
+            <Nav auth={auth} />
+          </Route>
+          <Route exact path="/liked/:id">
+            <Liked db={db} />
+            <Nav auth={auth} />
+          </Route>
+          <Route exact path="/search/:id">
+            <Search db={db} />
+            <Nav auth={auth} />
+          </Route>
+          <Route exact path="/signup">
+            <Signup auth={auth} db={db} />
+          </Route>
+          <Route exact path="/signin">
+            <Signin auth={auth} />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
