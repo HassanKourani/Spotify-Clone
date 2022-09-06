@@ -4,7 +4,6 @@ const Welcome = ({ auth }) => {
   const history = useHistory();
   const handleGuest = (e) => {
     e.preventDefault();
-
     signInWithEmailAndPassword(auth, "guest@gmail.com", "guest1234")
       .then((cred) => {
         console.log(cred.user);
