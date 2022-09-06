@@ -18,7 +18,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Welcome />
+            <Welcome auth={auth} />
           </Route>
           <Route exact path="/home/:id">
             <Home db={db} />
