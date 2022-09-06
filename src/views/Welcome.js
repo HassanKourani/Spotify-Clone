@@ -1,5 +1,19 @@
-import { Link } from "react-router-dom";
-const Welcome = () => {
+import { Link, useHistory } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+const Welcome = ({ auth }) => {
+  const history = useHistory();
+  const handleGuest = (e) => {
+    e.preventDefault();
+
+    signInWithEmailAndPassword(auth, "guest@gmail.com", "guest1234")
+      .then((cred) => {
+        console.log(cred.user);
+        history.push(`/home/${cred.user.uid}`);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   return (
     <div className="min-w-screen min-h-screen text-gray-200 bg-[url('https://img5.goodfon.com/wallpaper/nbig/7/51/kasety-muzyka-fon-1.jpg')]">
       <main className="min-w-screen min-h-screen bg-gray-700 bg-opacity-60 p-4">
@@ -26,10 +40,17 @@ const Welcome = () => {
               Tunes is where You can find your Own personal Space, Listen to
               your favourite songs, create Your own Vibes.
             </p>
+
             <button className="text-lg bg-emerald-600 p-2 rounded-md hover:bg-emerald-700 mt-2">
               <Link to="/signup" className="w-full">
                 Get Started
               </Link>
+            </button>
+            <button
+              className="text-lg bg-emerald-600 p-2 rounded-md hover:bg-emerald-700 mt-2  block sm:ml-6 sm:inline"
+              onClick={handleGuest}
+            >
+              Signin as Guest
             </button>
           </div>
         </div>
